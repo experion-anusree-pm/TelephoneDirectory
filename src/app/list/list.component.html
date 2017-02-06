@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row"> <b>Contact Informations</b></div>
+  <br> <br>
+  <div class="row">
+    <div class="col-sm-3">
+      
+      <p>Name</p>
+    </div>
+    <div class="col-sm-3">
+      <p>Phone Number</p>
+    </div>
+  </div>
+  <div class="row" *ngFor="let contactGet of contactPullObject | serach:searchKeyGet;  let i=index" >
+   <a  [routerLink]="['/viewContact',i]"> <div class="col-sm-3">
+      {{contactGet?.firstName}} {{contactGet?.lastName}}</div>
+
+    <div class="col-sm-3">
+      <div class="row">{{contactGet?.phoneNumber}}</div>
+    </div></a>
+    <hr>
+  </div>
+</div>

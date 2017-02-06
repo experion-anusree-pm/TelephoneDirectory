@@ -1,0 +1,13 @@
+<div class="row"> 
+ <td-header (searchKeyObject)="searchEmit = $event"></td-header>
+</div>
+<div class="row container">
+  <div class=" col-sm-6 ">
+ <td-list [searchKeyGet]="searchEmit"></td-list>
+  </div>
+  <div class="col-sm-6">
+    <!--<td-add-contact ></td-add-contact>-->
+    <router-outlet ></router-outlet>
+     
+  </div>
+</div>

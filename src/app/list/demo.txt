@@ -1,0 +1,72 @@
+routing .ts
+import { Routes, RouterModule } from '@angular/router';
+import {ContactaddComponent} from './contact/contactadd.component';
+import { ModuleWithProviders } from '@angular/core';
+
+const App_Routes: Routes = [
+    {path:'addContact', component: ContactaddComponent}
+];
+
+export const route: ModuleWithProviders = RouterModule.forRoot(App_Routes);
+
+
+
+
+
+app.moduley
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContactlistComponent } from './contact/contactlist.component';
+import { ContactaddComponent } from './contact/contactadd.component';
+import { route } from './app.routing'
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    ContactComponent,
+    ContactlistComponent,
+    ContactaddComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    route
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+
+
+
+add contact button
+<button type="button" class="btn btn-primary" [routerLink]="['/addContact']">Add Contact</button>
+)
+:)
+call router-outlet .. evidano display cheyande avide
+like this
+<div class="container">
+  <div class="row"> 
+    <div class="col-xs-6">
+      <div class="col-xs-6"> Name </div>
+      <div class="col-xs-6"> Number </div>
+      <td-contactlist></td-contactlist>
+      
+    </div>
+    
+    <div class="col-xs-6">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</div>

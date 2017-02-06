@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-6">
+      <div class="page-header">
+        <h2>Edit Contact</h2>
+      </div>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+        <div class="form-group">
+          <label for="formGroupExampleInput">First Name</label>
+          <input type="text" class="form-control"  [ngModel]="editObject?.firstName" name="txtFirstName" required maxlength="10">
+        </div>
+
+        <div class="form-group">
+          <label for="Last Name">Last Name</label>
+          <input type="text" class="form-control"  [ngModel]="editObject?.lastName" name="txtLastName" required maxlength="10" >
+        </div>
+
+        <div class="form-group">
+          <label for="Phone Number">Phone Number</label>
+          <input type="text" class="form-control"  [ngModel]="editObject?.phoneNumber" name="txtPhoneNumber" pattern="^(\+91[\-\s]?)?[0]?(91)?\d{10}$" >
+          
+        </div>
+
+        <div class="form-group">
+          <label for="Address">Address</label>
+          <textarea class="form-control"  [ngModel]="editObject?.Address" name="txtAddress" ></textarea>
+        </div>
+        
+
+        <div class="btn-group" role="group" aria-label="...">
+          <input type="submit" class="btn btn-default" value="Change">
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

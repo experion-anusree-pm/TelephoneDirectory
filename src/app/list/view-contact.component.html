@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-6">
+      <div class="page-header">
+        <h1>
+           Details
+        </h1>
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-3">
+          <label for="formGroupExampleInput">First Name:</label>
+        </div>
+        <div class="col-sm-3">
+          <label for="formGroupExampleInput">{{viewObject?.firstName}}</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <label for="formGroupExampleInput">Last Name:</label>
+        </div>
+        <div class="col-sm-3">
+          <label for="formGroupExampleInput">{{viewObject?.lastName}}</label>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="col-sm-3">
+             <label for="formGroupExampleInput">Phone Number:</label>
+          </div>
+         <div class="col-sm-3">
+           <label for="formGroupExampleInput">{{viewObject?.phoneNumber}}</label>
+         </div> 
+        </div>
+
+          <div class="row">
+          <div class="col-sm-3">
+             <label for="formGroupExampleInput">Address:</label>
+          </div>
+         <div class="col-sm-3">
+           <label for="formGroupExampleInput">{{viewObject?.Address}}</label>
+         </div> 
+        </div>
+          
+      <div class="btn-group" role="group" aria-label="...">
+        <input type="submit" class="btn btn-primary" value="  Edit" [routerLink]="['/editContact',indexvalue]">
+
+      </div>
+    </div>
+  </div>
+</div>

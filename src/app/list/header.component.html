@@ -1,0 +1,16 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div class="navbar-brand brand-decoration" >Telephone Directory </div>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active" [routerLink]="['./']"><a>Home</a></li>
+      <li  [routerLink]="['/addContact']"><a>Add Contact</a></li>
+    </ul>
+    <form class="navbar-form navbar-left">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" (keyup)="onKey($event)" style="width:700px;margin-bottom:0px">
+      </div>
+    </form>
+  </div>
+</nav>
